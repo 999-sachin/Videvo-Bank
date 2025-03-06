@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Video Container Styling */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; /* Places video behind content */
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8; /* Slight transparency for better text readability */
+}
+
+/* Connect section styling */
+#connect {
+    flex-grow: 1;
+    position: relative;
+    z-index: 1; /* Ensures form stays above video */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 40px); /* Accounts for footer height */
+}
+
+.container {
+    background-color: rgba(133, 124, 124, 0.9); /* Semi-transparent background */
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.container h2 {
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+    color: #fff;
+}
+
+form {
+    max-width: 622px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1rem;
+    color: #f6efef;
+    font-size: 18px;
+}
+
+input, textarea {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    background-color: #000000;
+    color: #ffffff;
+    margin: 20px 0 0 0;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #ff0000;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}

@@ -1,0 +1,196 @@
+/* 
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bank Services</title>
+        <link rel="stylesheet" href="services.css">
+    </head>
+    <body>
+        <div class="video-container">
+            <video autoplay muted loop id="background-video">
+                <source src="https://videocdn.cdnpk.net/videos/f26c91a1-83a2-5bc8-94d8-4e67e6f99ac6/horizontal/previews/videvo_watermarked/large.mp4" type="video/mp4">
+            </video>
+        </div>
+    
+        <header>
+            <h1>VIDEVO Bank of Canada</h1>
+        </header>
+    
+        <!-- Carousel Section -->
+        <section class="carousel">
+            <div class="carousel-container">
+                <div class="slide">
+                    <img src="https://thepaypers.com/Images/SocialMedia2022/canada-social-media.jpg" alt="Bank Vault">
+                </div>
+                <div class="slide">
+                    <img src="https://www.icicibank.ca/content/dam/icicibank/canada/debit-card1%20-%20Copy.jpg" alt="Online Banking">
+                </div>
+                <div class="slide">
+                    <img src="https://s3.mordorintelligence.com/canada-education-student-loans-market/canada-education-student-loans-market_1696940528362_133.webp" alt="Loan Services">
+                </div>
+            </div>
+        </section>
+    
+        <section id="services" class="services">
+            <div class="service">
+                <h2><a href="https://en.wikipedia.org/wiki/Bank">Personal Banking</a></h2>
+                <p>Manage your savings and checking accounts with ease.</p>
+            </div>
+            <div class="service">
+                <h2><a href="https://en.wikipedia.org/wiki/Loan">Loans & Credit</a></h2>
+                <p>Get personal, home, and business loans at competitive rates.</p>
+            </div>
+            <div class="service">
+                <h2><a href="https://retail.onlinesbi.sbi/retail/login.htm">Online Banking</a></h2>
+                <p>Access your accounts anytime, anywhere with our secure online banking.</p>
+            </div>
+            <div class="service">
+                <h2><a href="https://en.wikipedia.org/wiki/Investment_banking">Investment Services</a></h2>
+                <p>Grow your wealth with our investment and financial planning services.</p>
+            </div>
+        </section>
+    
+        <footer>
+            © 2025 VIDEVO Bank of Canada. All rights reserved.
+        </footer>
+    </body>
+    </html> */
+
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 60px; /* Prevents footer overlap */
+        background-color: #f4f4f4;
+    }
+    
+    header {
+        background: #003366;
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+        position: relative;
+        z-index: 2; /* Above video and carousel */
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    /* Video Background */
+    .video-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        z-index: -1;
+    }
+    
+    #background-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+    }
+    
+    
+    
+    
+    /* Services Section */
+    .services {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 20px;
+        margin-top: 20px;
+        position: relative;
+        z-index: 2; /* Above video */
+    }
+    
+    .service {
+        background: #fff;
+        margin: 10px;
+        padding: 50px;
+        width: 300px;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .service h2>a{
+        text-decoration: none;
+    }
+    
+    .service:hover {
+        background-color: rgb(193, 207, 193);
+        transform: scale(1.05);
+        box-shadow: 3px 4px 5px gray;
+    }
+    
+    .service h2 {
+        padding-bottom: 20px;
+        font-size: 1.5rem;
+    }
+    
+    .service p {
+        line-height: 1.5;
+    }
+    
+    /* Footer */
+    footer {
+        background: #003366;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 2; /* Above video */
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        header h1 {
+            font-size: 1.5rem;
+        }
+    
+        .carousel-container {
+            height: 200px; /* Smaller height on mobile */
+        }
+    
+        .service {
+            width: 100%;
+            max-width: 350px; /* Limits width on small screens */
+            margin: 10px auto;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        header h1 {
+            font-size: 1.2rem;
+        }
+    
+        .carousel-container {
+            height: 150px;
+        }
+    
+        .service h2 {
+            font-size: 1.2rem;
+        }
+    
+        .service p {
+            font-size: 0.9rem;
+        }
+    }
